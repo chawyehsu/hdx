@@ -3,4 +3,5 @@
 !.editorconfig
 !.vscode/
 !.vscode/*
+!README.md
 /target

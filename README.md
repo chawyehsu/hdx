@@ -12,6 +12,9 @@
 $ hdx
 CLI tool for accessing Huawei/HarmonyOS Developer Download Center.
 
+If you find any bug or have a feature request, please open an issue on
+GitHub: https://github.com/chawyehsu/hdx/issues
+
 Usage: hdx [OPTIONS] <COMMAND>
 
 Commands:
@@ -48,7 +51,7 @@ hdx auth login
 hdx dget <tool>
 ```
 
-目前支持获取 [`deveco-studio`] 和 [`command-line-tools-for-hmos`] 两个工具的下载链接。拿到带签名的下载链接后，可以自行使用浏览器或者下载工具进行下载。
+目前支持获取 [`deveco-studio`] 和 [`command-line-tools-for-hmos`] 两个工具的下载链接。获取链接期间可能会要求签署用户协议。拿到带签名的下载链接后，可以自行使用浏览器或者下载工具进行下载。
 
 如遇认证信息失效，可以使用 `auth refresh` 命令刷新认证信息。
 

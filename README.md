@@ -1,12 +1,14 @@
 # hdx
 
+[简体中文]
+
 > Access Huawei/HarmonyOS Developer [Download Center] from CLI
 
-命令行工具用于访问华为鸿蒙开发者社区下载中心。
+CLI tool for accessing Huawei HarmonyOS Developer Community Download Center.
 
 ## Getting Started
 
-从 [GitHub releases][releases] 页面下载最新版本的二进制文件，解压后将可执行文件放到 PATH 中，运行 `hdx` 查看帮助信息。
+Download the latest version of the binary from the [GitHub releases][releases] page, extract and place the executable in your PATH. Run `hdx` to see the help information.
 
 ```plaintext
 $ hdx
@@ -35,38 +37,39 @@ Options:
 
 #### auth
 
-首先使用 `auth login` 命令进行华为账号的登录，登录成功后认证信息会保存在本地的认证文件 `~/.config/hdx/credentials.json` 中，妥善保管。
+First, use the `auth login` command to log in with your Huawei ID. After a successful login, the authentication information will be saved in the local authentication file `~/.config/hdx/credentials.json`. Please keep it safe.
 
 ```plaintext
 hdx auth login
 ```
 
-目前仅支持使用[华为账号]的**账号名+密码+动态验证码**的组合方式进行登录。暂不支持手机号/邮箱+密码的登录方式。
+Currently, only the combination of **username + password + dynamic verification code** using a [Huawei ID] is supported for login. Logging in with a phone number/email + password is not currently supported.
 
 #### dget
 
-登录成功后，可以使用 `dget` 命令获取指定工具的下载链接。
+After a successful login, you can use the `dget` command to get the download link for the specified tool.
 
 ```plaintext
 hdx dget <tool>
 ```
 
-目前支持获取 [`deveco-studio`] 和 [`command-line-tools-for-hmos`] 两个工具的下载链接。获取链接期间可能会要求签署用户协议。拿到带签名的下载链接后，可以自行使用浏览器或者下载工具进行下载。
+Currently, it supports obtaining download links for [`deveco-studio`] and [`command-line-tools-for-hmos`]. You may be required to sign a user agreement during the process. Once you have signed the agreement and obtained the download link, you can use a browser or download tool to download it.
 
-如遇认证信息失效，可以使用 `auth refresh` 命令刷新认证信息。
+If the authentication information expires, you can use the `auth refresh` command to refresh the authentication information.
 
 #### config
 
-使用 `config` 命令可以查看和修改本工具的设置。配置文件保存在 `~/.config/hdx/config.json` 中。
+Use the `config` command to view and modify the settings of this tool. The configuration file is saved in `~/.config/hdx/config.json`.
 
 ```plaintext
 hdx config
 ```
 
-目前仅支持为工具设置代理服务器 `proxy`。
+Currently, only setting a proxy server for the tool using `proxy` is supported.
 
+[简体中文]: README.zh-Hans.md
 [Download Center]: https://developer.huawei.com/consumer/cn/download/
 [releases]: https://github.com/chawyehsu/hdx/releases/latest
 [`deveco-studio`]: https://developer.huawei.com/consumer/cn/download/deveco-studio
 [`command-line-tools-for-hmos`]: https://developer.huawei.com/consumer/cn/download/command-line-tools-for-hmos
-[华为账号]: https://id.huawei.com
+[Huawei ID]: https://id.huawei.com
